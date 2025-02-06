@@ -14,6 +14,8 @@ Yape.WcfService.Contracts → Interfaces y modelos compartidos.
 Yape.WcfService.Data → Acceso a datos con MySQL.
 Yape.WcfService.Business → Lógica de negocio.
 Yape.WcfService.Host → Servicio WCF.
+
+
 2️⃣ API REST (.NET 8)
 Patrón: Arquitectura Hexagonal (Puertos y Adaptadores).
 Tecnologías: .NET 8, Entity Framework Core, MySQL.
@@ -32,6 +34,8 @@ curl --location 'https://localhost:7182/api/Client' \
   "documentType": "DNI",
   "documentNumber": "12345678"
 }'
+
+
 📊 Base de Datos (MySQL)
 📍 Creación de la Base de Datos y Tabla
 sql
@@ -49,9 +53,13 @@ CREATE TABLE persons (
     DocumentNumber VARCHAR(50) NOT NULL
 );
 🚀 Cómo Ejecutar el Proyecto
+
+
 1️⃣ Configurar el Servicio WCF
 Compilar y ejecutar Yape.WcfService.Host.
 Verificar que el WSDL esté disponible en http://localhost:65442/PersonService.svc?wsdl.
+
+
 2️⃣ Configurar la API REST
 Configurar la conexión a MySQL en appsettings.json.
 Ejecutar migraciones de Entity Framework (si aplica).
